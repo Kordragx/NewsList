@@ -44,7 +44,7 @@ class NewsService {
                             }
 
                         } else {
-                            // Error
+                            self.datasource.conectivityError()
                         }
                     case let .failure(error):
                         self.datasource.serviceError(error: error)
