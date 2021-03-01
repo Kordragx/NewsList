@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F07AC1025ED952E00A36D52 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F07AC0F25ED952E00A36D52 /* Reachability.swift */; };
 		6FA6FA2625EAA9C900772A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FA2525EAA9C900772A53 /* AppDelegate.swift */; };
 		6FA6FA2A25EAA9C900772A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FA2925EAA9C900772A53 /* ViewController.swift */; };
 		6FA6FA2F25EAA9C900772A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6FA2E25EAA9C900772A53 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		07C9F28097086AA8F061F416 /* Pods-News.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.release.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.release.xcconfig"; sourceTree = "<group>"; };
 		0C24F16878FD8736FA8B54AA /* Pods_News.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_News.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A5A741DBA0628A3E6D95621 /* Pods-News.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-News.debug.xcconfig"; path = "Target Support Files/Pods-News/Pods-News.debug.xcconfig"; sourceTree = "<group>"; };
+		6F07AC0F25ED952E00A36D52 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		6FA6FA2225EAA9C900772A53 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FA6FA2525EAA9C900772A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FA6FA2925EAA9C900772A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				6FA6FB0F25EAEB2600772A53 /* Extensions */,
+				6F07AC0F25ED952E00A36D52 /* Reachability.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 			files = (
 				6FA6FB7F25EBDCDF00772A53 /* Date+.swift in Sources */,
 				6FA6FB1125EAEB5C00772A53 /* WKWebView+Load.swift in Sources */,
+				6F07AC1025ED952E00A36D52 /* Reachability.swift in Sources */,
 				6FA6FACF25EAD20D00772A53 /* NewsService.swift in Sources */,
 				6FA6FB6925EBDA4A00772A53 /* NewsItemListCell.swift in Sources */,
 				6FA6FAC525EABE4400772A53 /* News.swift in Sources */,

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         setup()
-        callToViewModelForUIUpdate()
+        attempFetchNews()
 
     }
 
@@ -43,21 +43,19 @@ class ViewController: UIViewController {
         newsTableView.rowHeight = UITableView.automaticDimension
 
         self.newsTableView.addSubview(refreshControl)
-        refreshControl.beginRefreshing()
+
     }
 
-    func callToViewModelForUIUpdate(){
+    func attempFetchNews() {
 
-        self.newsViewModel =  NewsViewModel()
+        newsViewModel = NewsViewModel()
+        self.refreshControl.beginRefreshing()
+
         self.newsViewModel.bindNewsViewModelToController = {
-            self.updateDataSource()
-        }
-    }
-
-    func updateDataSource(){
-        refreshControl.endRefreshing()
-        DispatchQueue.main.async {
-            self.newsTableView.reloadData()
+            self.refreshControl.endRefreshing()
+            DispatchQueue.main.async {
+                self.newsTableView.reloadData()
+            }
         }
     }
 

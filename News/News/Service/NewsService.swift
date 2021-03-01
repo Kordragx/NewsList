@@ -21,38 +21,39 @@ class NewsService {
     }
 
     func callService() {
+        if Reachability.isConnectedToNetwork {
 
+            AF.request(endoint, method: .get)
+                .responseJSON { response in
+                    switch response.result {
+                    case .success:
+                        if let httpStatusCode = response.response?.statusCode {
+                            switch(httpStatusCode) {
+                            case 200:
+                                let jsonDecoder = JSONDecoder()
 
-        AF.request(endoint, method: .get)
-            .responseJSON { response in
+                                if let news = try? jsonDecoder.decode(
+                                    News.self,
+                                    from: response.data!
+                                ) {
+                                    self.datasource.fetchNews(news: news)
+                                }
 
-                switch response.result {
-                case .success:
-
-                    if let httpStatusCode = response.response?.statusCode {
-                        switch(httpStatusCode) {
-                        case 200:
-                            let jsonDecoder = JSONDecoder()
-
-                            if let news = try? jsonDecoder.decode(
-                                News.self,
-                                from: response.data!
-                            ) {
-                                self.datasource.fetchNews(news: news)
+                            default:
+                                debugPrint()
                             }
 
-                        default:
-                            debugPrint()
+                        } else {
+                            // Error
                         }
-
-                    } else {
-                        // Error
+                    case let .failure(error):
+                        self.datasource.serviceError(error: error)
                     }
-                case let .failure(error):
-
-                    self.datasource.serviceError(error: error)
                 }
-            }
+        } else {
+            self.datasource.conectivityError()
+        }
+
     }
 
 }
@@ -60,7 +61,7 @@ class NewsService {
 // MARK: Protocol
 
 protocol NewsServiceProtocol {
-
     func fetchNews(news: News)
     func serviceError(error: Error)
+    func conectivityError()
 }
