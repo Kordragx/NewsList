@@ -9,7 +9,6 @@ import UIKit
 import WebKit
 
 class NewsDetailController: UIViewController, WKNavigationDelegate {
-
     @IBOutlet weak var webView: WKWebView!
 
     static let nibName = String(describing: NewsDetailController.self)
@@ -26,7 +25,6 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
         navigationController?.setNavigationBarHidden(false, animated: false)
 
         setupViews()
-
     }
 
     func setupViews() {

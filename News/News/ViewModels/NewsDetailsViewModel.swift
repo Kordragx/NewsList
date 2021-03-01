@@ -11,11 +11,11 @@ protocol NewsDetailsViewModelOutput {
     var url: String { get }
 }
 
-protocol NewsDetailsViewModel: NewsDetailsViewModelOutput { }
+protocol NewsDetailsViewModel: NewsDetailsViewModelOutput {}
 
 final class DefaultMovieDetailsViewModel: NewsDetailsViewModel {
-
     // MARK: - OUTPUT
+
     let url: String
 
     init(url: String) {

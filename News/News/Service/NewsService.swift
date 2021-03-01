@@ -10,7 +10,6 @@ import Foundation
 import SwiftyJSON
 
 class NewsService {
-
     var datasource: NewsServiceProtocol
     var endoint: String = "https://hn.algolia.com/api/v1/search_by_date?query=mobile"
 
@@ -22,13 +21,12 @@ class NewsService {
 
     func callService() {
         if Reachability.isConnectedToNetwork {
-
             AF.request(endoint, method: .get)
                 .responseJSON { response in
                     switch response.result {
                     case .success:
                         if let httpStatusCode = response.response?.statusCode {
-                            switch(httpStatusCode) {
+                            switch httpStatusCode {
                             case 200:
                                 let jsonDecoder = JSONDecoder()
 
@@ -51,11 +49,9 @@ class NewsService {
                     }
                 }
         } else {
-            self.datasource.conectivityError()
+            datasource.conectivityError()
         }
-
     }
-
 }
 
 // MARK: Protocol

@@ -16,28 +16,27 @@ struct NewsListItemViewModel: Equatable {
 }
 
 extension NewsListItemViewModel {
-
-
     init(news: NewsData) {
-        self.id = news.objectID
-        self.title = news.storyTitle ?? news.title ?? ""
-        self.author = news.author
-        self.url = news.storyURL ?? news.url ?? ""
-
+        id = news.objectID
+        title = news.storyTitle ?? news.title ?? ""
+        author = news.author
+        url = news.storyURL ?? news.url ?? ""
 
         if let dateCreated = dateFormatter.date(from: news.createdAt) {
             let (day, hour, min) = Date() - dateCreated
             if day! >= 1 {
-                self.create_at = NSLocalizedString("Ayer", comment: "")
-            } else if hour! >=  1 {
-                self.create_at = NSLocalizedString("Hora", comment: "").replacingOccurrences(of: "{t}", with: String(describing: hour!))
-            } else if hour! <= 0 && min! >= 1 {
-                self.create_at = NSLocalizedString("Min", comment: "").replacingOccurrences(of: "{t}", with: String(describing: min!))
+                create_at = NSLocalizedString("Ayer", comment: "")
+            } else if hour! >= 1 {
+                create_at = NSLocalizedString("Hora", comment: "")
+                    .replacingOccurrences(of: "{t}", with: String(describing: hour!))
+            } else if hour! <= 0, min! >= 1 {
+                create_at = NSLocalizedString("Min", comment: "")
+                    .replacingOccurrences(of: "{t}", with: String(describing: min!))
             } else {
-                self.create_at = NSLocalizedString("Ahora", comment: "")
+                create_at = NSLocalizedString("Ahora", comment: "")
             }
         } else {
-            self.create_at = ""
+            create_at = ""
         }
     }
 }
@@ -45,7 +44,6 @@ extension NewsListItemViewModel {
 // MARK: - Private
 
 private let dateFormatter: DateFormatter = {
-
     let formatter = Foundation.DateFormatter()
 
     formatter.locale = Locale(identifier: "en_US_POSIX")

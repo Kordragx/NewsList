@@ -8,6 +8,7 @@
 import Foundation
 
 // MARK: - News
+
 struct News: Codable {
     var hits: [NewsData]
     let nbHits, page, nbPages, hitsPerPage: Int
@@ -18,6 +19,7 @@ struct News: Codable {
 }
 
 // MARK: - Hit
+
 struct NewsData: Codable {
     let createdAt: String
     let title: String?
@@ -52,6 +54,7 @@ struct NewsData: Codable {
 }
 
 // MARK: - HighlightResult
+
 struct HighlightResult: Codable {
     let author: Author
     let commentText, storyTitle, storyURL, title: Author?
@@ -69,6 +72,7 @@ struct HighlightResult: Codable {
 }
 
 // MARK: - Author
+
 struct Author: Codable {
     let value: String
     let matchLevel: MatchLevel
@@ -77,10 +81,10 @@ struct Author: Codable {
 }
 
 enum MatchLevel: String, Codable {
-    case full = "full"
-    case none = "none"
+    case full
+    case none
 }
 
 enum Query: String, Codable {
-    case mobile = "mobile"
+    case mobile
 }

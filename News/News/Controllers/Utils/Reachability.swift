@@ -7,9 +7,8 @@
 import Alamofire
 
 public class Reachability {
-
     static let sharedInstance = NetworkReachabilityManager()!
     static var isConnectedToNetwork: Bool {
-        return self.sharedInstance.isReachable
+        return sharedInstance.isReachable
     }
 }
