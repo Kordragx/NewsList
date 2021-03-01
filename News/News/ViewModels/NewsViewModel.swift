@@ -9,34 +9,19 @@ import Foundation
 
 class NewsViewModel : NSObject, NewsServiceProtocol {
 
-    private(set) var items: [NewsListItemViewModel]! {
-        didSet {
-            self.bindNewsViewModelToController()
-            self.didFinishFetch?()
-        }
-    }
-
-    var errorService: Error? {
-        didSet { self.showAlertClosure?() }
-    }
-    var isLoading: Bool = false {
-        didSet { self.updateLoadingStatus?() }
-    }
-
-
-    var deletedNews: [String] = []
 
     let conditions: [(NewsListItemViewModel) -> Bool] = [
         {!$0.title.isEmpty},
         {!$0.url.isEmpty},
     ]
 
+    private(set) var items: [NewsListItemViewModel]! {
+        didSet {
+            self.bindNewsViewModelToController()
+        }
+    }
 
-    // MARK: - Closures for callback, since we are not using the ViewModel to the View.
-    var showAlertClosure: (() -> ())?
-    var updateLoadingStatus: (() -> ())?
-    var didFinishFetch: (() -> ())?
-
+    var deletedNews: [String] = []
     var bindNewsViewModelToController : (() -> ()) = {}
 
     override init() {
@@ -58,9 +43,6 @@ class NewsViewModel : NSObject, NewsServiceProtocol {
     // MARK: Protocol News Service
 
     func fetchNews(news: News) {
-        self.errorService = nil
-        self.isLoading = false
-
         items = news.hits.map(NewsListItemViewModel.init)
         items = items.filter({ !deletedNews.contains($0.id) })
         items = items.filter {
@@ -71,9 +53,7 @@ class NewsViewModel : NSObject, NewsServiceProtocol {
 
 
     func serviceError(error: Error) {
-        errorService = error
-        isLoading = false
+        
     }
-
 
 }

@@ -20,7 +20,6 @@ class ViewController: UIViewController {
         return refreshControl
     }()
 
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,7 @@ class ViewController: UIViewController {
 
         newsTableView.delegate = self
         newsTableView.dataSource = self
-        newsTableView.register(UINib.init(nibName: "NewsItemListCell", bundle: nil), forCellReuseIdentifier: "NewsItemListCell")
+        newsTableView.register(UINib.init(nibName: NewsItemListCell.reuseIdentifier, bundle: nil), forCellReuseIdentifier: NewsItemListCell.reuseIdentifier)
 
         newsTableView.estimatedRowHeight = NewsItemListCell.height
         newsTableView.rowHeight = UITableView.automaticDimension
@@ -56,12 +55,6 @@ class ViewController: UIViewController {
     }
 
     func updateDataSource(){
-
-        //        self.dataSource = EmployeeTableViewDataSource(cellIdentifier: "EmployeeTableViewCell", items: self.employeeViewModel.empData.data, configureCell: { (cell, evm) in
-        //            cell.employeeIdLabel.text = evm.id
-        //            cell.employeeNameLabel.text = evm.employeeName
-        //        })
-
         refreshControl.endRefreshing()
         DispatchQueue.main.async {
             self.newsTableView.reloadData()
@@ -82,9 +75,9 @@ extension ViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsItemListCell",
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: NewsItemListCell.reuseIdentifier,
                                                        for: indexPath) as? NewsItemListCell else {
-            assertionFailure("Cannot dequeue reusable cell \(NewsItemListCell.self) with reuseIdentifier: NewsItemListCell")
+            assertionFailure("Cannot dequeue reusable cell \(NewsItemListCell.self) with reuseIdentifier: \(NewsItemListCell.reuseIdentifier)")
             return UITableViewCell()
         }
         

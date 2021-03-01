@@ -12,10 +12,11 @@ class NewsDetailController: UIViewController, WKNavigationDelegate {
 
     @IBOutlet weak var webView: WKWebView!
 
+    static let nibName = String(describing: NewsDetailController.self)
     private var viewModel: NewsDetailsViewModel!
 
     static func create(with viewModel: NewsDetailsViewModel) -> NewsDetailController {
-        let view = NewsDetailController(nibName: "NewsDetailController", bundle: nil)
+        let view = NewsDetailController(nibName: nibName, bundle: nil)
         view.viewModel = viewModel
         return view
     }

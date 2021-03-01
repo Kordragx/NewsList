@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5FCCA075108E8AD5A0724B92 /* Pods_News_NewsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D590A8262E1A4FBA64094E09 /* Pods_News_NewsUITests.framework */; };
 		6FA6FA2625EAA9C900772A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FA2525EAA9C900772A53 /* AppDelegate.swift */; };
 		6FA6FA2A25EAA9C900772A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FA2925EAA9C900772A53 /* ViewController.swift */; };
 		6FA6FA2F25EAA9C900772A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6FA2E25EAA9C900772A53 /* Assets.xcassets */; };
 		6FA6FA3225EAA9C900772A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FA6FA3025EAA9C900772A53 /* LaunchScreen.storyboard */; };
-		6FA6FA3D25EAA9CA00772A53 /* VirtusListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FA3C25EAA9CA00772A53 /* VirtusListTests.swift */; };
-		6FA6FA4825EAA9CA00772A53 /* VirtusListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FA4725EAA9CA00772A53 /* VirtusListUITests.swift */; };
 		6FA6FAC525EABE4400772A53 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FAC425EABE4400772A53 /* News.swift */; };
 		6FA6FACA25EAD1BD00772A53 /* NewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FAC925EAD1BD00772A53 /* NewsViewModel.swift */; };
 		6FA6FACF25EAD20D00772A53 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FACE25EAD20D00772A53 /* NewsService.swift */; };
@@ -27,25 +24,7 @@
 		6FA6FB7225EBDA9E00772A53 /* NewsListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FB7125EBDA9E00772A53 /* NewsListItemViewModel.swift */; };
 		6FA6FB7F25EBDCDF00772A53 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA6FB7E25EBDCDF00772A53 /* Date+.swift */; };
 		9B4F9C9A941788E7D429D302 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C24F16878FD8736FA8B54AA /* Pods_News.framework */; };
-		D5A8DD7C1D641D76AFA47EC3 /* Pods_NewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 910991F0F5060DE419AC8628 /* Pods_NewsTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6FA6FA3925EAA9CA00772A53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6FA6FA1A25EAA9C900772A53 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6FA6FA2125EAA9C900772A53;
-			remoteInfo = VirtusList;
-		};
-		6FA6FA4425EAA9CA00772A53 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6FA6FA1A25EAA9C900772A53 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6FA6FA2125EAA9C900772A53;
-			remoteInfo = VirtusList;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0450C87126B2ECE67843DD46 /* Pods-VirtusList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtusList.release.xcconfig"; path = "Target Support Files/Pods-VirtusList/Pods-VirtusList.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,12 +38,6 @@
 		6FA6FA2E25EAA9C900772A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6FA6FA3125EAA9C900772A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6FA6FA3325EAA9C900772A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FA6FA3825EAA9CA00772A53 /* NewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FA6FA3C25EAA9CA00772A53 /* VirtusListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtusListTests.swift; sourceTree = "<group>"; };
-		6FA6FA3E25EAA9CA00772A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6FA6FA4325EAA9CA00772A53 /* NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6FA6FA4725EAA9CA00772A53 /* VirtusListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtusListUITests.swift; sourceTree = "<group>"; };
-		6FA6FA4925EAA9CA00772A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6FA6FAC425EABE4400772A53 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		6FA6FAC925EAD1BD00772A53 /* NewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewModel.swift; sourceTree = "<group>"; };
 		6FA6FACE25EAD20D00772A53 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
@@ -98,22 +71,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6FA6FA3525EAA9CA00772A53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D5A8DD7C1D641D76AFA47EC3 /* Pods_NewsTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6FA6FA4025EAA9CA00772A53 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5FCCA075108E8AD5A0724B92 /* Pods_News_NewsUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -140,8 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				6FA6FA2425EAA9C900772A53 /* News */,
-				6FA6FA3B25EAA9CA00772A53 /* NewsTests */,
-				6FA6FA4625EAA9CA00772A53 /* NewsUITests */,
 				6FA6FA2325EAA9C900772A53 /* Products */,
 				4EE6E3F45ECB0727B686CE69 /* Pods */,
 				E95F39ED0CBC6D50B1153B80 /* Frameworks */,
@@ -152,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				6FA6FA2225EAA9C900772A53 /* News.app */,
-				6FA6FA3825EAA9CA00772A53 /* NewsTests.xctest */,
-				6FA6FA4325EAA9CA00772A53 /* NewsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,24 +122,6 @@
 				6FA6FA8A25EAB98800772A53 /* Resources */,
 			);
 			path = News;
-			sourceTree = "<group>";
-		};
-		6FA6FA3B25EAA9CA00772A53 /* NewsTests */ = {
-			isa = PBXGroup;
-			children = (
-				6FA6FA3C25EAA9CA00772A53 /* VirtusListTests.swift */,
-				6FA6FA3E25EAA9CA00772A53 /* Info.plist */,
-			);
-			path = NewsTests;
-			sourceTree = "<group>";
-		};
-		6FA6FA4625EAA9CA00772A53 /* NewsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				6FA6FA4725EAA9CA00772A53 /* VirtusListUITests.swift */,
-				6FA6FA4925EAA9CA00772A53 /* Info.plist */,
-			);
-			path = NewsUITests;
 			sourceTree = "<group>";
 		};
 		6FA6FA7025EAAE0E00772A53 /* App */ = {
@@ -320,45 +255,6 @@
 			productReference = 6FA6FA2225EAA9C900772A53 /* News.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6FA6FA3725EAA9CA00772A53 /* NewsTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6FA6FA4F25EAA9CA00772A53 /* Build configuration list for PBXNativeTarget "NewsTests" */;
-			buildPhases = (
-				1F04A1170CFCE4A5CB907805 /* [CP] Check Pods Manifest.lock */,
-				6FA6FA3425EAA9CA00772A53 /* Sources */,
-				6FA6FA3525EAA9CA00772A53 /* Frameworks */,
-				6FA6FA3625EAA9CA00772A53 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6FA6FA3A25EAA9CA00772A53 /* PBXTargetDependency */,
-			);
-			name = NewsTests;
-			productName = VirtusListTests;
-			productReference = 6FA6FA3825EAA9CA00772A53 /* NewsTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		6FA6FA4225EAA9CA00772A53 /* NewsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 6FA6FA5225EAA9CA00772A53 /* Build configuration list for PBXNativeTarget "NewsUITests" */;
-			buildPhases = (
-				440B5B58D4DBB3B939B4CFE4 /* [CP] Check Pods Manifest.lock */,
-				6FA6FA3F25EAA9CA00772A53 /* Sources */,
-				6FA6FA4025EAA9CA00772A53 /* Frameworks */,
-				6FA6FA4125EAA9CA00772A53 /* Resources */,
-				EF9827F8DD26DB9B376927BE /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6FA6FA4525EAA9CA00772A53 /* PBXTargetDependency */,
-			);
-			name = NewsUITests;
-			productName = VirtusListUITests;
-			productReference = 6FA6FA4325EAA9CA00772A53 /* NewsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -370,14 +266,6 @@
 				TargetAttributes = {
 					6FA6FA2125EAA9C900772A53 = {
 						CreatedOnToolsVersion = 12.4;
-					};
-					6FA6FA3725EAA9CA00772A53 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 6FA6FA2125EAA9C900772A53;
-					};
-					6FA6FA4225EAA9CA00772A53 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 6FA6FA2125EAA9C900772A53;
 					};
 				};
 			};
@@ -395,8 +283,6 @@
 			projectRoot = "";
 			targets = (
 				6FA6FA2125EAA9C900772A53 /* News */,
-				6FA6FA3725EAA9CA00772A53 /* NewsTests */,
-				6FA6FA4225EAA9CA00772A53 /* NewsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -411,20 +297,6 @@
 				6FA6FAFE25EAE99D00772A53 /* ViewController.xib in Resources */,
 				6FA6FA2F25EAA9C900772A53 /* Assets.xcassets in Resources */,
 				6FA6FB6A25EBDA4A00772A53 /* NewsItemListCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6FA6FA3625EAA9CA00772A53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6FA6FA4125EAA9CA00772A53 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,50 +325,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1F04A1170CFCE4A5CB907805 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-NewsTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		440B5B58D4DBB3B939B4CFE4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-News-NewsUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A03135DA868E72AFD8C7DCFB /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,23 +340,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News/Pods-News-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EF9827F8DD26DB9B376927BE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-News-NewsUITests/Pods-News-NewsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-News-NewsUITests/Pods-News-NewsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-News-NewsUITests/Pods-News-NewsUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -552,36 +363,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6FA6FA3425EAA9CA00772A53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FA6FA3D25EAA9CA00772A53 /* VirtusListTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6FA6FA3F25EAA9CA00772A53 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6FA6FA4825EAA9CA00772A53 /* VirtusListUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6FA6FA3A25EAA9CA00772A53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6FA6FA2125EAA9C900772A53 /* News */;
-			targetProxy = 6FA6FA3925EAA9CA00772A53 /* PBXContainerItemProxy */;
-		};
-		6FA6FA4525EAA9CA00772A53 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 6FA6FA2125EAA9C900772A53 /* News */;
-			targetProxy = 6FA6FA4425EAA9CA00772A53 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6FA6FA3025EAA9C900772A53 /* LaunchScreen.storyboard */ = {
@@ -753,94 +535,6 @@
 			};
 			name = Release;
 		};
-		6FA6FA5025EAA9CA00772A53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7246F7402AF0C080EC05BBB1 /* Pods-NewsTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6PAWHNJXG7;
-				INFOPLIST_FILE = VirtusListTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = virtus.VirtusListTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/News.app/News";
-			};
-			name = Debug;
-		};
-		6FA6FA5125EAA9CA00772A53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9093B5E0B9F9252075CED192 /* Pods-NewsTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6PAWHNJXG7;
-				INFOPLIST_FILE = VirtusListTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = virtus.VirtusListTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/News.app/News";
-			};
-			name = Release;
-		};
-		6FA6FA5325EAA9CA00772A53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF662096F7C4726B18DA7D87 /* Pods-News-NewsUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6PAWHNJXG7;
-				INFOPLIST_FILE = VirtusListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = virtus.VirtusListUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VirtusList;
-			};
-			name = Debug;
-		};
-		6FA6FA5425EAA9CA00772A53 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EB9899B06308E32C11FDAF42 /* Pods-News-NewsUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6PAWHNJXG7;
-				INFOPLIST_FILE = VirtusListUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = virtus.VirtusListUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = VirtusList;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -858,24 +552,6 @@
 			buildConfigurations = (
 				6FA6FA4D25EAA9CA00772A53 /* Debug */,
 				6FA6FA4E25EAA9CA00772A53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6FA6FA4F25EAA9CA00772A53 /* Build configuration list for PBXNativeTarget "NewsTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6FA6FA5025EAA9CA00772A53 /* Debug */,
-				6FA6FA5125EAA9CA00772A53 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		6FA6FA5225EAA9CA00772A53 /* Build configuration list for PBXNativeTarget "NewsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6FA6FA5325EAA9CA00772A53 /* Debug */,
-				6FA6FA5425EAA9CA00772A53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

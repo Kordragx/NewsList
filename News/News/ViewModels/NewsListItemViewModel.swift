@@ -36,12 +36,6 @@ extension NewsListItemViewModel {
         } else {
             self.create_at = ""
         }
-
-//        if let releaseDate = movie.releaseDate {
-//            self.releaseDate = "\(NSLocalizedString("Release Date", comment: "")): \(dateFormatter.string(from: releaseDate))"
-//        } else {
-//            self.releaseDate = NSLocalizedString("To be announced", comment: "")
-//        }
     }
 }
 
@@ -50,14 +44,8 @@ extension NewsListItemViewModel {
 private let dateFormatter: DateFormatter = {
 
     let formatter = Foundation.DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ" //2017-04-01T18:05:00.000  2021-02-28T23:01:34.000Z
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
     formatter.timeZone = TimeZone(abbreviation: "UTC")
 
     return formatter
-
-//    let formatter = DateFormatter()
-//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-//    formatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
-//    formatter.formatterBehavior = .default
-//    return formatter
 }()
