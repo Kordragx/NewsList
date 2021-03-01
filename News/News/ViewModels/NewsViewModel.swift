@@ -61,6 +61,7 @@ class NewsViewModel : NSObject, NewsServiceProtocol {
           conditions.reduce(true) { $0 && $1(story) }
        }
 
+
         backupList = filter
         items = filter
     }

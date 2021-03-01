@@ -23,6 +23,8 @@ final class NewsItemListCell: UITableViewCell {
 
         title.text = viewModel.title
         createAt.text = viewModel.author + " - " + viewModel.create_at
+
+        
         
     }
 }

@@ -17,6 +17,7 @@ struct NewsListItemViewModel: Equatable {
 
 extension NewsListItemViewModel {
 
+
     init(news: NewsData) {
         self.id = news.objectID
         self.title = news.storyTitle ?? news.title ?? ""
@@ -25,13 +26,15 @@ extension NewsListItemViewModel {
 
 
         if let dateCreated = dateFormatter.date(from: news.createdAt) {
-            let (day, hour, _) = Date().localDate() - dateCreated
+            let (day, hour, min) = Date() - dateCreated
             if day! >= 1 {
-                self.create_at = "Ayer"
+                self.create_at = NSLocalizedString("Ayer", comment: "")
             } else if hour! >=  1 {
-                self.create_at = "\(hour!)h"
+                self.create_at = NSLocalizedString("Hora", comment: "").replacingOccurrences(of: "{t}", with: String(describing: hour!))
+            } else if hour! <= 0 && min! >= 1 {
+                self.create_at = NSLocalizedString("Min", comment: "").replacingOccurrences(of: "{t}", with: String(describing: min!))
             } else {
-                self.create_at = "Ahora"
+                self.create_at = NSLocalizedString("Ahora", comment: "")
             }
         } else {
             self.create_at = ""
@@ -44,8 +47,9 @@ extension NewsListItemViewModel {
 private let dateFormatter: DateFormatter = {
 
     let formatter = Foundation.DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
-    formatter.timeZone = TimeZone(abbreviation: "UTC")
+
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 
     return formatter
 }()
