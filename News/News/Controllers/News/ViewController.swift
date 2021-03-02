@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var newsTableView: UITableView!
+    @IBOutlet weak var lblMessage: UILabel!
+
     private var newsViewModel: NewsViewModel!
 
     lazy var refreshControl: UIRefreshControl = {
@@ -52,10 +54,17 @@ class ViewController: UIViewController {
         refreshControl.beginRefreshing()
 
         newsViewModel.bindNewsViewModelToController = {
+            self.lblMessage.isHidden = true
+            self.newsTableView.isHidden = false
             self.refreshControl.endRefreshing()
             DispatchQueue.main.async {
                 self.newsTableView.reloadData()
             }
+        }
+
+        if newsViewModel.conectivity {
+            self.refreshControl.endRefreshing()
+            lblMessage.isHidden = false
         }
     }
 }
@@ -110,6 +119,7 @@ extension ViewController: UITableViewDelegate {
 
 extension ViewController {
     @objc func handleRefresh(_: UIRefreshControl) {
+        newsViewModel.conectivity = false
         newsViewModel.callService()
         DispatchQueue.main.async {
             self.newsTableView.reloadData()

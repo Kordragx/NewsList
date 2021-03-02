@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="News" customModuleProvider="target">
             <connections>
+                <outlet property="lblMessage" destination="qe5-JG-0Xq" id="dMb-Yw-biy"/>
                 <outlet property="newsTableView" destination="6Ap-o7-rul" id="hL0-CP-79a"/>
                 <outlet property="view" destination="5RC-ri-HhT" id="XlE-4A-pG5"/>
             </connections>
@@ -26,12 +27,20 @@
                         <outlet property="delegate" destination="-1" id="SUt-oP-qgf"/>
                     </connections>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No se han encontrado noticias" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qe5-JG-0Xq">
+                    <rect key="frame" x="24.5" y="431" width="365" height="34"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="1jl-7I-Teb"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="6Ap-o7-rul" firstAttribute="centerX" secondItem="5RC-ri-HhT" secondAttribute="centerX" id="0zQ-ge-uAn"/>
                 <constraint firstItem="6Ap-o7-rul" firstAttribute="leading" secondItem="5RC-ri-HhT" secondAttribute="leading" id="7eO-QJ-YOL"/>
+                <constraint firstItem="qe5-JG-0Xq" firstAttribute="centerX" secondItem="5RC-ri-HhT" secondAttribute="centerX" id="IiD-Dl-uzb"/>
+                <constraint firstItem="qe5-JG-0Xq" firstAttribute="centerY" secondItem="5RC-ri-HhT" secondAttribute="centerY" id="M7U-AW-Gbd"/>
                 <constraint firstItem="6Ap-o7-rul" firstAttribute="bottom" secondItem="5RC-ri-HhT" secondAttribute="bottomMargin" id="cxX-WL-hgz"/>
                 <constraint firstItem="6Ap-o7-rul" firstAttribute="top" secondItem="5RC-ri-HhT" secondAttribute="topMargin" id="ije-dN-Vqy"/>
             </constraints>

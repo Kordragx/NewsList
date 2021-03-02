@@ -19,20 +19,14 @@ class NewsViewModel: NSObject, NewsServiceProtocol {
         }
     }
 
-    var errorService: Error? {
-        didSet { showBackup() }
-    }
-
-    var conectivity: Bool = false {
-        didSet { showBackup() }
-    }
+    var errorService: Error?
+    var conectivity: Bool = false
 
     var deletedNews: [String] = []
-    var bindNewsViewModelToController: (() -> Void) = {}
-
-    var showBackup: (() -> Void) = {}
     var backupList: [NewsListItemViewModel]!
 
+    var bindNewsViewModelToController: (() -> Void) = {}
+    
     override init() {
         super.init()
 
@@ -65,15 +59,23 @@ class NewsViewModel: NSObject, NewsServiceProtocol {
     }
 
     func serviceError(error: Error) {
-        errorService = error
+
+        if let temp = backupList {
+            items = temp
+        } else {
+            conectivity = true
+            errorService = nil
+        }
+
     }
 
     func conectivityError() {
-        conectivity = true
-        errorService = nil
 
-        if !backupList.isEmpty {
-            items = backupList
+        if let temp = backupList {
+            items = temp
+        } else {
+            conectivity = true
+            errorService = nil
         }
     }
 }
