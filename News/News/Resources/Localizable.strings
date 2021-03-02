@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  News
+
+  Created by Daniel Nunez on 01-03-21.
+  
+*/
+
+"Ayer" = "Ayer";
+"Ahora" = "Ahora";
+"Hora" = "{t}h";
+"Min" = "{t}m";
+

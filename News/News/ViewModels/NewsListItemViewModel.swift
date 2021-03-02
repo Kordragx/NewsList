@@ -16,48 +16,38 @@ struct NewsListItemViewModel: Equatable {
 }
 
 extension NewsListItemViewModel {
-
     init(news: NewsData) {
-        self.id = news.objectID
-        self.title = news.storyTitle ?? news.title ?? ""
-        self.author = news.author
-        self.url = news.storyURL ?? news.url ?? ""
-
+        id = news.objectID
+        title = news.storyTitle ?? news.title ?? ""
+        author = news.author
+        url = news.storyURL ?? news.url ?? ""
 
         if let dateCreated = dateFormatter.date(from: news.createdAt) {
-            let (day, hour, _) = Date().localDate() - dateCreated
+            let (day, hour, min) = Date() - dateCreated
             if day! >= 1 {
-                self.create_at = "Ayer"
-            } else if hour! >=  1 {
-                self.create_at = "\(hour!)h"
+                create_at = NSLocalizedString("Ayer", comment: "")
+            } else if hour! >= 1 {
+                create_at = NSLocalizedString("Hora", comment: "")
+                    .replacingOccurrences(of: "{t}", with: String(describing: hour!))
+            } else if hour! <= 0, min! >= 1 {
+                create_at = NSLocalizedString("Min", comment: "")
+                    .replacingOccurrences(of: "{t}", with: String(describing: min!))
             } else {
-                self.create_at = "Ahora"
+                create_at = NSLocalizedString("Ahora", comment: "")
             }
         } else {
-            self.create_at = ""
+            create_at = ""
         }
-
-//        if let releaseDate = movie.releaseDate {
-//            self.releaseDate = "\(NSLocalizedString("Release Date", comment: "")): \(dateFormatter.string(from: releaseDate))"
-//        } else {
-//            self.releaseDate = NSLocalizedString("To be announced", comment: "")
-//        }
     }
 }
 
 // MARK: - Private
 
 private let dateFormatter: DateFormatter = {
-
     let formatter = Foundation.DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ" //2017-04-01T18:05:00.000  2021-02-28T23:01:34.000Z
-    formatter.timeZone = TimeZone(abbreviation: "UTC")
+
+    formatter.locale = Locale(identifier: "en_US_POSIX")
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 
     return formatter
-
-//    let formatter = DateFormatter()
-//    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-//    formatter.timeZone = NSTimeZone(name: "UTC")! as TimeZone
-//    formatter.formatterBehavior = .default
-//    return formatter
 }()

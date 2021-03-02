@@ -7,38 +7,26 @@
 
 import Foundation
 
-class NewsViewModel : NSObject, NewsServiceProtocol {
+class NewsViewModel: NSObject, NewsServiceProtocol {
+    let conditions: [(NewsListItemViewModel) -> Bool] = [
+        { !$0.title.isEmpty },
+        { !$0.url.isEmpty }
+    ]
 
     private(set) var items: [NewsListItemViewModel]! {
         didSet {
-            self.bindNewsViewModelToController()
-            self.didFinishFetch?()
+            bindNewsViewModelToController()
         }
     }
 
-    var errorService: Error? {
-        didSet { self.showAlertClosure?() }
-    }
-    var isLoading: Bool = false {
-        didSet { self.updateLoadingStatus?() }
-    }
-
+    var errorService: Error?
+    var conectivity: Bool = false
 
     var deletedNews: [String] = []
+    var backupList: [NewsListItemViewModel]!
 
-    let conditions: [(NewsListItemViewModel) -> Bool] = [
-        {!$0.title.isEmpty},
-        {!$0.url.isEmpty},
-    ]
-
-
-    // MARK: - Closures for callback, since we are not using the ViewModel to the View.
-    var showAlertClosure: (() -> ())?
-    var updateLoadingStatus: (() -> ())?
-    var didFinishFetch: (() -> ())?
-
-    var bindNewsViewModelToController : (() -> ()) = {}
-
+    var bindNewsViewModelToController: (() -> Void) = {}
+    
     override init() {
         super.init()
 
@@ -52,28 +40,42 @@ class NewsViewModel : NSObject, NewsServiceProtocol {
     func delete(index: Int) {
         deletedNews.append(items[index].id)
         items.remove(at: index)
-
     }
 
     // MARK: Protocol News Service
 
     func fetchNews(news: News) {
-        self.errorService = nil
-        self.isLoading = false
+        errorService = nil
 
-        items = news.hits.map(NewsListItemViewModel.init)
-        items = items.filter({ !deletedNews.contains($0.id) })
-        items = items.filter {
-          story in
-          conditions.reduce(true) { $0 && $1(story) }
-       }
+        var filter = news.hits.map(NewsListItemViewModel.init)
+        filter = filter.filter { !deletedNews.contains($0.id) }
+        filter = filter.filter {
+            story in
+            conditions.reduce(true) { $0 && $1(story) }
+        }
+
+        backupList = filter
+        items = filter
     }
-
 
     func serviceError(error: Error) {
-        errorService = error
-        isLoading = false
+
+        if let temp = backupList {
+            items = temp
+        } else {
+            conectivity = true
+            errorService = nil
+        }
+
     }
 
+    func conectivityError() {
 
+        if let temp = backupList {
+            items = temp
+        } else {
+            conectivity = true
+            errorService = nil
+        }
+    }
 }
