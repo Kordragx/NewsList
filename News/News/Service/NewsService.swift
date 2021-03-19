@@ -12,7 +12,7 @@ import SwiftyJSON
 class NewsService {
     var datasource: NewsServiceProtocol
     var endoint: String = "https://hn.algolia.com/api/v1/search_by_date?query=mobile"
-    var asdf: String = "Hola"
+
     init(datasource: NewsServiceProtocol) {
         self.datasource = datasource
 
